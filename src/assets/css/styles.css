@@ -1,1 +1,7 @@
+@import url("https://use.typekit.net/kld6dyl.css");
 @import "tailwindcss";
+
+@theme {
+  --font-interstate: interstate, sans-serif;
+  --font-display: berthold-block-w1g-condensed, sans-serif;
+}
