@@ -1,0 +1,27 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "Starting point for building static sites",
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf _site",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "watch:stylesheets": "tailwindcss -i src/assets/css/styles.css -o _site/assets/css/styles.css --watch",
+    "build:stylesheets": "tailwindcss -i src/assets/css/styles.css -o _site/assets/css/styles.css",
+    "watch:scripts": "esbuild src/assets/js/scripts.js --bundle --outfile=_site/assets/js/scripts.js --watch",
+    "build:scripts": "esbuild src/assets/js/scripts.js --bundle --outfile=_site/assets/js/scripts.js --minify",
+    "start": "npm-run-all -p watch:*",
+    "build": "npm-run-all -s clean build:*"
+  },
+  "author": "Grant Elliott",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@tailwindcss/cli": "^4.1.17",
+    "esbuild": "^0.27.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^6.1.2",
+    "tailwindcss": "^4.1.17"
+  }
+}
