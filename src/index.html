@@ -4,17 +4,92 @@ layout: default
 ---
 
 <section>
-  <div class="bg-pink-400 relative">
-    <picture>
-      <img class="h-full w-full" src="assets/images/pattern.svg" alt="">
-    </picture>
+  <div class="bg-pink-400 relative h-screen">
+    <img class="h-screen w-screen object-cover" src="assets/images/pattern.svg" alt="">
   </div>
   <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center">
-    <h1 class="font-display text-white text-9xl uppercase leading-[0.8]">Grant<span class="text-2xl"> </span>& <span class="block">Rebecca</span></h1>
-    <a class="" href="/rsvp">RSVP</a>
+    <img class="w-sm md:w-md lg:w-lg max-w-5/6" src="assets/images/logo.svg" alt="">
+    <div class="mt-10 flex items-center justify-center gap-x-6">
+      <a href="#rsvp" class="rounded-full bg-white border-2 border-white px-5 py-2.5 text-md font-semibold hover:bg-transparent hover:text-white  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">RSVP ↓</a>
+    </div>
   </div>
 </section>
 
+<section class="bg-white px-6 py-24 sm:py-32 lg:px-8">
+  <div class="mx-auto max-w-2xl text-center">
+    <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Hotel information</h2>
+    <p class="mt-2 text-lg/8 text-gray-600">Planning on staying over?</p>
+  </div>
+  <div class="mx-auto mt-16 max-w-xl overflow-hidden rounded-xl bg-white shadow-md md:max-w-2xl">
+    <div class="md:flex">
+      <div class="md:shrink-0">
+        <img class="h-96 w-full object-cover md:h-full md:w-72" src="assets/images/hotel.jpg" alt="The Social Hub, Glasgow"/>
+      </div>
+      <div class="p-8 flex flex-col items-start">
+        <h3 class="mb-2 text-lg leading-tight font-medium text-gray-900">The Social Hub</h3>
+        <p class="mb-2 text-gray-600">We’ve secured a special discount for our guests at The Social Hub hotel nearby.</p>
+        <p class="mb-2 text-gray-600 flex items-center gap-2">Use the following code when booking to receive 10% off:</p>
+        <div class="flex gap-x-3 items-center">
+          <span id="copyTarget" class="text-gray-900 font-mono font-bold bg-gray-100 px-1.5 py-0.5 rounded">WEDDINGGLA2026</span>
+        <button id="copyButton" type="button" class="relative text-sm text-red-600 hover:underline hover:cursor-pointer">Copy<span id="tooltip" class="absolute -top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-gray-900 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200">Copied!</span></button>
+        </div>
+        <div class="mt-8 flex gap-x-3">
+          <a target="_blank" href="https://maps.app.goo.gl/WDDUN2Ci1h17qT7q7" class="rounded-md bg-transparent px-3 py-2 text-sm font-semibold text-red-600 border-2 border-red-600 shadow-xs hover:text-white hover:bg-red-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Directions</a>
+          <a target="_blank" href="https://www.thesocialhub.co/glasgow" class="rounded-md bg-red-600 border-2 border-red-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:border-red-700 hover:bg-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Booking information</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white px-6 py-24 sm:py-32 lg:px-8">
+  <div class="mx-auto max-w-2xl text-center">
+    <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">RSVP</h2>
+    <p class="mt-2 text-lg/8 text-gray-600">We hope you can join the celebrations on our special day!</p>
+  </div>
+  <form action="#" method="POST" class="mx-auto mt-16 max-w-xl">
+    <div class="border-b border-gray-900/10 pb-12">
+      <div class="grid gap-x-8 gap-y-6">
+        <fieldset>
+          <div class="space-y-6">
+            <div class="flex items-center gap-x-3">
+              <input id="attending-yes" type="radio" name="attending" checked class="relative size-4 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-red-600 checked:bg-red-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden" />
+              <label for="attending-yes" class="block text-sm/6 font-medium text-gray-900">Wouldn't miss it</label>
+            </div>
+            <div class="flex items-center gap-x-3">
+              <input id="attending-no" type="radio" name="attending" class="relative size-4 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-red-600 checked:bg-red-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden" />
+              <label for="attending-no" class="block text-sm/6 font-medium text-gray-900">Unable to attend</label>
+            </div>
+          </div>
+        </fieldset>
+            
+        <div>
+          <label for="name" class="block text-sm/6 font-semibold text-gray-900">Name(s)</label>
+          <div class="mt-2.5">
+            <input id="name" type="text" name="name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-red-600" />
+          </div>
+        </div>
+
+        <div>
+          <label for="dietary" class="block text-sm/6 font-semibold text-gray-900">Dietary requirements</label>
+          <div class="mt-2.5">
+            <input id="dietary" type="text" name="dietary" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-red-600" />
+          </div>
+        </div>
+
+        <div>
+          <label for="song" class="block text-sm/6 font-semibold text-gray-900">Song suggestion for playlist</label>
+          <div class="mt-2.5">
+            <input id="song" type="text" name="song" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-red-600" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-12 flex items-center justify-end gap-x-6">
+        <button type="submit" class="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Submit</button>
+      </div>
+  </form>
+</section>
 
 
 
