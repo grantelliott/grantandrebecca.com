@@ -5,18 +5,18 @@ layout: default
 
 
 
-<section>
+<section id="hero">
   <div class="bg-pink-400 relative h-screen">
     <img class="h-screen w-screen object-cover" src="assets/images/pattern.svg" alt="">
   </div>
   <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center gap-y-16">
     <img class="w-sm md:w-md lg:w-lg max-w-5/6" src="assets/images/logo.svg" alt="Grant & Rebecca">
-    <nav class="fixed top-8 z-40 bg-white border-b border-gray-200 rounded-full">
-      <ul class="flex justify-center gap-6 overflow-x-auto px-4 py-6 text-sm font-medium text-gray-900">
-        <li><a href="#rsvp" class="px-4 py-3 rounded-full transition-colors duration-200">RSVP</a></li>
-        <li><a href="#schedule" class="px-4 py-3 rounded-full transition-colors duration-200">Schedule</a></li>
-        <li><a href="#menu" class="px-4 py-3 rounded-full transition-colors duration-200">Menu</a></li>
-        <li><a href="#hotel" class="px-4 py-3 rounded-full transition-colors duration-200">Hotel Info</a></li>
+    <nav class="fixed top-4 sm:top-8 z-40 bg-white rounded-full shadow-xl">
+      <ul class="flex whitespace-nowrap justify-center gap-2 px-2 py-3 text-xs sm:gap-3 sm:px-3 sm:py-4 sm:text-sm md:gap-6 md:text-base text-gray-900 font-medium">
+        <li><a href="#rsvp" class="px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-3 rounded-full transition-colors duration-200">RSVP</a></li>
+        <li><a href="#details" class="px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-3 rounded-full transition-colors duration-200">The Details</a></li>
+        <li><a href="#menu" class="px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-3 rounded-full transition-colors duration-200">Menu</a></li>
+        <li><a href="#hotel" class="px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-3 rounded-full transition-colors duration-200">Hotel Info</a></li>
       </ul>
     </nav>
   </div>
@@ -30,10 +30,10 @@ layout: default
   <form action="#" method="POST" class="mx-auto mt-16 max-w-xl">
     <div class="border-b border-gray-900/10 pb-12">
       <div class="grid gap-x-8 gap-y-6">
+
         <fieldset aria-label="Choose a size" class="mt-4">
           <h3 class="text-sm font-medium text-gray-900">Are you able to attend?</h3>
           <div class="grid grid-cols-2 gap-3 mt-2.5">
-            
             <label for="attending-yes" class="group relative flex items-center justify-center rounded-md border border-gray-300 bg-white p-3 has-checked:border-red-600 has-checked:bg-red-50 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-red-600 has-disabled:border-gray-400 has-disabled:bg-gray-200 has-disabled:opacity-25">
               <input id="attending-yes" type="radio" name="attending" class="absolute inset-0 appearance-none focus:outline-none disabled:cursor-not-allowed" />
               <span class="text-sm font-medium text-gray-900">Yes, wouldn't miss it</span>
@@ -42,7 +42,6 @@ layout: default
               <input id="attending-no" type="radio" name="attending" class="absolute inset-0 appearance-none focus:outline-none disabled:cursor-not-allowed" />
               <span class="text-sm font-medium text-gray-900">Sorry, unable to attend</span>
             </label>
-            
           </div>
         </fieldset>
             
@@ -54,18 +53,12 @@ layout: default
         </div>
 
         <div>
-          <label for="dietary" class="block text-sm/6 font-semibold text-gray-900">Dietary requirements</label>
-          <div class="mt-2.5">
-            <input id="dietary" type="text" name="dietary" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-red-600" />
-          </div>
-        </div>
-
-        <div>
           <label for="song" class="block text-sm/6 font-semibold text-gray-900">Song suggestion for playlist</label>
           <div class="mt-2.5">
             <input id="song" type="text" name="song" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-red-600" />
           </div>
         </div>
+
       </div>
     </div>
     <div class="mt-12 flex items-center justify-end gap-x-6">
@@ -74,29 +67,25 @@ layout: default
   </form>
 </section>
 
-<section id="schedule" class="bg-white px-6 py-24 sm:py-32 scroll-mt-24 lg:px-8">
+<section id="details" class="bg-white px-6 py-24 sm:py-32 scroll-mt-24 lg:px-8">
   <div class="mx-auto max-w-2xl text-center">
-    <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Our Big Day</h2>
-    <p class="mt-2 text-lg/8 text-gray-600">Planning on staying over?</p>
+    <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">The Details</h2>
+    <p class="mt-2 text-lg/8 text-gray-600">Everything you need to know for our big day.</p>
+    <h3 class="mt-16 text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-3xl">12th February 2026</h3>
+    <h4 class="mt-2 text-base text-gray-900"><span id="countdown">0</span> days to go!</h4>
+    <h3 class="mt-16 text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-3xl">2:00pm</h3>
+    <h4 class="mt-2 text-base text-gray-900">Please be seated for 1:50pm.</h4>
   </div>
   <div class="mx-auto mt-16 max-w-xl overflow-hidden rounded-xl bg-white shadow-md md:max-w-2xl">
-    <div class="md:flex">
-      <div class="md:shrink-0">
-        <img class="h-96 w-full object-cover md:h-full md:w-72" src="assets/images/hotel.jpg" alt="The Social Hub, Glasgow"/>
-      </div>
-      <div class="p-8 flex flex-col items-start">
-        <h3 class="mb-2 text-lg leading-tight font-medium text-gray-900">The Social Hub</h3>
-        <p class="mb-2 text-gray-600">We’ve secured a special discount for our guests at The Social Hub hotel nearby.</p>
-        <p class="mb-2 text-gray-600 flex items-center gap-2">Use the following code when booking to receive 30% off:</p>
-        <div class="flex gap-x-3 items-center">
-          <span id="copyTarget" class="text-gray-900 font-mono font-bold bg-gray-100 px-1.5 py-0.5 rounded">WEDDINGGLA2026</span>
-        <button id="copyButton" type="button" class="relative text-sm text-red-600 hover:underline hover:cursor-pointer">Copy<span id="tooltip" class="absolute -top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-gray-900 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200">Copied!</span></button>
-        </div>
-        <div class="mt-8 flex gap-x-3">
-          <a target="_blank" href="https://maps.app.goo.gl/WDDUN2Ci1h17qT7q7" class="rounded-md bg-transparent px-3 py-2 text-sm font-semibold text-red-600 border-2 border-red-600 shadow-xs hover:text-white hover:bg-red-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Directions</a>
-          <a target="_blank" href="https://www.thesocialhub.co/glasgow" class="rounded-md bg-red-600 border-2 border-red-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:border-red-700 hover:bg-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Booking information</a>
-        </div>
-      </div>
+    <div class="relative w-full" style="padding-bottom: 75%;"> <!-- 4:3 ratio -->
+      <iframe
+        class="absolute inset-0 w-full h-full rounded-lg"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.263307499111!2d-4.2441518!3d55.8580979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488846a14ebf0869%3A0x89bb823940fe5fc3!2sArta!5e0!3m2!1sen!2suk!4v1764622534057!5m2!1sen!2suk"
+        allowfullscreen=""
+        loading="lazy"
+        style="border:0;"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </div>
 </section>
@@ -105,47 +94,32 @@ layout: default
   <div class="mx-auto max-w-2xl text-center">
     <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Menu</h2>
     <p class="mt-2 text-lg/8 text-gray-600">Tapas served family style.</p>
-
     <h3 class="mt-16 text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-3xl">To Start</h3>
     <h4 class="mt-8 text-base font-semibold text-gray-900">Pan Y Aceitunas (VG)</h4>
     <p class="text-base/7 text-gray-600">Bread, Olives, EVOO, Balsamic</p>
-
     <h4 class="mt-4 text-base font-semibold text-gray-900">Mixed Olives, Serrano Ham & Manchego</h4>
-
     <h3 class="mt-16 text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-3xl">The Main Event</h3>
     <h4 class="mt-8 text-base font-semibold text-gray-900">Pollo Envuelto En Jamón Serrano</h4>
     <p class="text-base/7 text-gray-600">Serrano Wrapped Chicken</p>
-
     <h4 class="mt-8 text-base font-semibold text-gray-900">Albóndigas</h4>
     <p class="text-base/7 text-gray-600">Lamb & Ricotta Meatballs, Roast Tomato Sauce, Saffron Polenta</p>
-
     <h4 class="mt-8 text-base font-semibold text-gray-900">Gambas Al Ajillo</h4>
     <p class="text-base/7 text-gray-600">King Prawns, Chilli, Coriander, Garlic, Lime, Olive Oil</p>
-
     <h4 class="mt-8 text-base font-semibold text-gray-900">Paella De Chargrilled Piquillo Pepper (VG)</h4>
     <p class="text-base/7 text-gray-600">Tenderstem Broccoli, Spinach, Romesco</p>
-
     <h4 class="mt-8 text-base font-semibold text-gray-900">Patatas Bravas (VG)</h4>
     <p class="text-base/7 text-gray-600">Classic Spanish Fried Potatoes, Rustic Spicy Tomato Sauce</p>
-
     <h4 class="mt-8 text-base font-semibold text-gray-900">Roast Cauliflower (VG)</h4>
     <p class="text-base/7 text-gray-600">Toasted Almonds, Romesco</p>
-
     <h3 class="mt-16 text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-3xl">Dessert</h3>
     <h4 class="mt-8 text-base font-semibold text-gray-900">White Chocolate Cheesecake</h4>
     <p class="text-base/7 text-gray-600">Raspberry Coulis</p>
-
-
-    
-
   </div>
 </section>
 
-
-
 <section id="hotel" class="bg-white px-6 py-24 sm:py-32 scroll-mt-24 lg:px-8">
   <div class="mx-auto max-w-2xl text-center">
-    <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Hotel information</h2>
+    <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Hotel Information</h2>
     <p class="mt-2 text-lg/8 text-gray-600">Planning on staying over?</p>
   </div>
   <div class="mx-auto mt-16 max-w-xl overflow-hidden rounded-xl bg-white shadow-md md:max-w-2xl">
@@ -169,9 +143,3 @@ layout: default
     </div>
   </div>
 </section>
-
-
-
-
-
-
