@@ -27,7 +27,7 @@ layout: default
     <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">RSVP</h2>
     <p class="mt-2 text-lg/8 text-gray-600">We hope you can join the celebrations on our special day!</p>
   </div>
-  <form action="#" method="POST" class="mx-auto mt-16 max-w-xl">
+  <form data-netlify="true" data-netlify-recaptcha="true" method="POST" class="mx-auto mt-16 max-w-xl">
     <div class="border-b border-gray-900/10 pb-12">
       <div class="grid gap-x-8 gap-y-6">
 
@@ -62,6 +62,7 @@ layout: default
       </div>
     </div>
     <div class="mt-12 flex items-center justify-end gap-x-6">
+      <div data-netlify-recaptcha="true"></div>
         <button type="submit" class="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Submit</button>
       </div>
   </form>
